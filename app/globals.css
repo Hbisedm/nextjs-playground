@@ -2,20 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 默认亮色主题 - 天蓝色 */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: 204 94% 94%;    /* 浅天蓝色背景 #EBF8FF */
+  --foreground: 204 45% 25%;    /* 深蓝色文字 #1A4971 */
+  --primary: 204 80% 40%;       /* 主色调蓝色 #1E88E5 */
+  --primary-foreground: 0 0% 100%;  /* 白色文字 #FFFFFF */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* 暗色主题 - 灰白色 */
+.dark {
+  --background: 220 17% 17%;    /* 深灰色背景 #242830 */
+  --foreground: 220 13% 91%;    /* 浅灰白色文字 #E5E7EB */
+  --primary: 220 13% 91%;       /* 主色调灰白 #E5E7EB */
+  --primary-foreground: 220 17% 17%;  /* 深灰色文字 #242830 */
 }

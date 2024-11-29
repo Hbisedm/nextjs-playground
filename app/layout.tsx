@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ThemeToggle from "@/components/client/ThemeToggle";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -26,8 +27,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
+        {/* header加入下划线阴影 */}
+        <header className="flex items-center justify-between w-full px-3 py-2 border-b border-gray-200 dark:border-gray-800">
+          <h1 className="text-2xl font-bold">Nestjs Playground</h1>
+        <div className="ml-auto">
+        <ThemeToggle/>
+        </div>
+      </header>
         {children}
       </body>
     </html>
