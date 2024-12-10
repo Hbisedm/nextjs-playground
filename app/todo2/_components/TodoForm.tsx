@@ -21,7 +21,7 @@ export default function TodoForm() {
   };
 
   return <div className="flex gap-2 items-center justify-center text-primary p-1 border-primary border-2 rounded-md">
-    <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
+    <input className="text-black" type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
     <IoAddCircleSharp  className="text-primary text-2xl" onClick={handleAddTodo} />
   </div>;
 }
